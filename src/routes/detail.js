@@ -16,6 +16,15 @@ app.get('/stopJob', async (req, res) => {
     res.send("Job Stoped...")
 })
 
+app.get('/jobStatus' , async (req , res)=>{
+    const status = job.running
+    if (!status) {
+        res.send("Job Has Stopped...")
+    }else{
+        res.send("Job Is Running...")
+    }
+})
+
 
 //Get Data
 app.get('/getData', async (req, res) => {

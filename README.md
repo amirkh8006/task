@@ -33,7 +33,26 @@
 
   * **Code:** 200 <br />
     **Content:** `Job Stoped...`
-    
+
+
+
+**Title**
+----
+  Get Job Status
+
+* **URL**
+
+  http://localhost:3000/jobStatus
+
+* **Method:**
+
+  `GET`
+* **Success Response:**
+  
+
+  * **Code:** 200 <br />
+    **Content:** `Job Is Running...` Or `Job Has Stopped...`
+
     
     
 **Title**
