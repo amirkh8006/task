@@ -22,23 +22,18 @@ const Detail = new mongoose.Schema({
     },
     d: {
         type: String,
-        required: [true, 'd is required!']
     },
     dp: {
         type: Number,
-        required: [true, 'dp is required!']
     },
     dt: {
         type: String,
-        required: [true, 'dt is required!']
     },
     t: {
         type: String,
-        required: [true, 't is required!']
     },
     ts: {
         type: String,
-        required: [true, 'ts is required!']
     },
 
 }, {
