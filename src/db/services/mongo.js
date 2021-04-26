@@ -1,5 +1,5 @@
 const Promise = require('bluebird')
-const Detail = require('../model/Detail');
+const Detail = require('../model/Detail') 
 
 async function addDetail(data) {
     return new Promise((resolve, reject) => {
@@ -11,7 +11,7 @@ async function addDetail(data) {
             })
             .catch((err) => {
                 reject(err)
-            });
+            }) 
     })
 
 }
@@ -24,11 +24,11 @@ async function getDetail() {
             })
             .catch((err) => {
                 reject(err)
-            });
+            }) 
     })
 }
 
 module.exports = {
     addDetail,
     getDetail
-};
+} 

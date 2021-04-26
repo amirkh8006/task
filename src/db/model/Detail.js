@@ -1,7 +1,7 @@
 const {
     mongoConnection
-} = require('../driver/mongo/connection');
-const mongoose = require('mongoose');
+} = require('../driver/mongo/connection') 
+const mongoose = require('mongoose') 
 
 
 const Detail = new mongoose.Schema({
@@ -42,6 +42,6 @@ const Detail = new mongoose.Schema({
 })
 
 
-const detailModel = mongoConnection.model('Detail', Detail);
+const detailModel = mongoConnection.model('Detail', Detail) 
 
 module.exports = detailModel

@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express') 
+const router = express.Router() 
 const job = require('../services/cronJobs/index')
 const mongoService = require('../db/services/mongo')
 const redisService = require('../db/services/redis')
@@ -56,4 +56,4 @@ router
             })
     })
 
-module.exports = router;
+module.exports = router 

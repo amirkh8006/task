@@ -1,7 +1,7 @@
 const getData = require("../price")
 const mongoService = require('../../db/services/mongo')
 const redisService = require('../../db/services/redis')
-const CronJob = require('cron').CronJob;
+const CronJob = require('cron').CronJob 
 
 
 let redisData = []
@@ -26,14 +26,14 @@ const functionJob = () => {
                 redisData.push({
                     timeStamp: new Date(),
                     data: dt
-                });
+                }) 
                 redisData.shift()
                 return redisService.hset("test", ["data", JSON.stringify(redisData)])
             } else {
                 redisData.push({
                     timeStamp: new Date(),
                     data: dt
-                });
+                }) 
                 return redisService.hset("test", ["data", JSON.stringify(redisData)])
             }
         })
@@ -43,7 +43,7 @@ const functionJob = () => {
 }
 
 const job = new CronJob('*/5 * * * * *', () => {
-    functionJob();
+    functionJob() 
 })
 
 module.exports = job

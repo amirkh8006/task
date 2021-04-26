@@ -1,5 +1,5 @@
 const Promise = require('bluebird')
-const axios = require('axios');
+const axios = require('axios') 
 
 const getData = () => {
     return new Promise((resolve, reject) => {
