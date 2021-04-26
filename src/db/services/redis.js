@@ -1,7 +1,7 @@
 const client = require('../driver/redis/connection')
+const Promise = require('bluebird')
 
-
-function hset(key, val) {
+const hset = (key, val) => {
     return new Promise((resolve, reject) => {
         client.hset(key, val, (err, rep) => {
             if (err)
@@ -11,7 +11,7 @@ function hset(key, val) {
     })
 }
 
-function hget(key, val) {
+const hget = (key, val) => {
     return new Promise((resolve, reject) => {
         client.hget(key, val, (err, rep) => {
             if (err)
