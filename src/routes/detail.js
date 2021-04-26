@@ -1,4 +1,4 @@
-const app = require('../app')
+const {app} = require('../app')
 const axios = require('axios')
 const job = require('../services/server')
 const mongoService = require('../db/services/mongo')
