@@ -8,7 +8,7 @@ app.use(cors())
 let http = require('http');
 let server = http.Server(app);
 
-const servers = require("./services/socket/index")
+require("./services/socket/index")
 
 app.use('/job', require('./routes/detail'))
 
