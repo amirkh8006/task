@@ -8,7 +8,7 @@ const errorHandler = (res, statusCode, error) => {
             }))
         }else{
             return resolve(res.status(statusCode).send({
-                error,
+                error
             }))
         }
     })
