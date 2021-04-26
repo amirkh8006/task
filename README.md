@@ -4,7 +4,7 @@
 
 * **URL**
 
-  http://localhost:3000/startJob
+  http://localhost:3000/job/startJob
 
 * **Method:**
 
@@ -23,7 +23,7 @@
 
 * **URL**
 
-  http://localhost:3000/stopJob
+  http://localhost:3000/job/stopJob
 
 * **Method:**
 
@@ -42,7 +42,7 @@
 
 * **URL**
 
-  http://localhost:3000/jobStatus
+  http://localhost:3000/job/jobStatus
 
 * **Method:**
 
@@ -61,7 +61,7 @@
 
 * **URL**
 
-  http://localhost:3000/getData
+  http://localhost:3000/job/getData
 
 * **Method:**
 
@@ -80,7 +80,7 @@
 
 * **URL**
 
-  http://localhost:3000/getDataFromDB
+  http://localhost:3000/job/getDataFromDB
 
 * **Method:**
 
@@ -153,7 +153,7 @@
 
 * **URL**
 
-  http://localhost:3000/getDataFromRedis
+  http://localhost:3000/job/getDataFromRedis
 
 * **Method:**
 
