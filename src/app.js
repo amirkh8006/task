@@ -8,15 +8,9 @@ app.use(cors())
 let http = require('http');
 let server = http.Server(app);
 
-let socketIO = require('socket.io');
-let io = socketIO(server , {
-    cors: {
-      origin: "http://localhost:4200",
-      credentials: true
-    }
-});
+const servers = require("./services/socket/index")
 
-// app.use('/cronJob', require('./routes/detail'))
+app.use('/job', require('./routes/detail'))
 
 const port = process.env.PORT || 3000;
 
@@ -25,5 +19,4 @@ server.listen(port, () => {
 });
 
 
-module.exports = {app , io}
-const routes = require('./routes/detail')
+
