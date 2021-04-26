@@ -16,6 +16,8 @@ let io = socketIO(server , {
     }
 });
 
+// app.use('/cronJob', require('./routes/detail'))
+
 const port = process.env.PORT || 3000;
 
 server.listen(port, () => {

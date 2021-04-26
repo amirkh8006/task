@@ -22,7 +22,8 @@ const job = new CronJob('*/5 * * * * *', function () {
                 t: dt.t,
                 ts: dt.ts
             })
-
+        })
+        .then(() => {
             if (redisData.length >= 10) {
                 redisData.push({
                     timeStamp: new Date(),
@@ -37,6 +38,9 @@ const job = new CronJob('*/5 * * * * *', function () {
                 });
                 await redisService.hset("test", ["data", JSON.stringify(redisData)])
             }
+        })
+        .then((result) => {
+            return resolve(result)
         })
         .catch(function (error) {
             // handle error

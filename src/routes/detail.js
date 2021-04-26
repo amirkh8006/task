@@ -6,9 +6,15 @@ const redisService = require('../db/services/redis')
 
 
 // JOB ROUTES
+
+router.route('/startJob')
+    .get()
+    .post()
+
 app.get('/startJob', async (req, res) => {
     job.start()
-    res.send("Job Started...")
+    // return res.send("Job Started...")
+    return SuccessHandler(res, 200, result, message)
 })
 
 app.get('/stopJob', async (req, res) => {
@@ -34,7 +40,17 @@ app.get('/getData', async (req, res) => {
         res.send(response.data)
     } catch (error) {
         console.error(error);
+        return ErrorHandler()
     }
+    // Services.price.getDate()
+    //     .then((result) => {
+    //     return SuccessHandler(res, 200, result, message)
+
+    //     })
+    //     .catch(() = > {
+    //     return ErrorHandler()
+
+    //     })
 })
 
 app.get('/getDataFromDB', async (req, res) => {
